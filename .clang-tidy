@@ -4,6 +4,7 @@ Checks:          'clang-diagnostic-*,
                   performance-*,
                   bugprone-*,
                   modernize-*,
+                  readability-*,
                   misc-*,
                   google-*'
 CheckOptions:

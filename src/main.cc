@@ -10,17 +10,38 @@
  */
 #include "main.h"
 
-void ShowHelloWorld();
+/**
+ * @brief Function 1
+ *
+ */
+void Fun1() { std::cout << "你好!" << std::endl; }
+
+/**
+ * @brief Function 2
+ *
+ */
+void Fun2() { }
+
+/**
+ * @brief Function 3
+ *
+ */
+void Fun3() {  }
+
+/**
+ * @brief Function 4
+ *
+ */
+void Fun4() {}
 
 /**
  * @brief The application entry point
  *
  * @return int The application exit code
  */
-auto main() -> int { ShowHelloWorld(); }
-
-/**
- * @brief print "Hello world!"
- *
- */
-void ShowHelloWorld() { std::cout << "你好!" << std::endl; }
+auto main() -> int {
+  Fun1();
+  Fun2();
+  Fun3();
+  Fun4();
+}

@@ -16,7 +16,6 @@ Checks: >
   -misc-non-private-member-variables-in-classes,
   google-*,
   -google-default-arguments,
-  -google-runtime-references,
   modernize-*,
   -modernize-use-noexcept,
   -modernize-use-trailing-return-type,

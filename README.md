@@ -1,4 +1,4 @@
-<Project>, is a <What> for Windows and Linux. Its main purpose is <To>.
+<Project>, is a <What>. Its main purpose is <To>.
 
 **Features**
 - <Feature1>
@@ -10,7 +10,7 @@ Please use the released [binaries](https://github.com/<Who>/<Project>/releases).
 
 **Build**
 
-It describes how to build Orbit and what Compilers, Platforms, and Tools are supported and needed.
+It describes how to build <Project> and what Compilers, Platforms, and Tools are supported and needed.
 
 **Workflow**
 1. <Step1>

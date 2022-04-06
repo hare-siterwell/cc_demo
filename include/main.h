@@ -11,8 +11,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <iostream>
-
-void ShowHelloWorld();
+#include <bits/stdc++.h>
 
 #endif  // MAIN_H

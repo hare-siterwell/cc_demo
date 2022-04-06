@@ -10,19 +10,17 @@
  */
 #include "main.h"
 
+void ShowHelloWorld();
+
 /**
  * @brief The application entry point
  *
  * @return int The application exit code
  */
-auto main() -> int {
-  ShowHelloWorld();
-
-  return 0;
-}
+auto main() -> int { ShowHelloWorld(); }
 
 /**
  * @brief print "Hello world!"
  *
  */
-void ShowHelloWorld() { std::cout << "Hello world!" << std::endl; }
+void ShowHelloWorld() { std::cout << "你好!" << std::endl; }

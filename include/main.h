@@ -1,16 +1,17 @@
 /**
  * @file main.h
- * @author Hare
- * @brief
+ * @author your name (you@domain.com)
+ * @brief Contains the common defines of the application
  * @version 0.1
- * @date 2022-03-15
+ * @date 2022-07-07
  *
  * @copyright Copyright (c) 2022
  *
  */
-#ifndef MAIN_H
-#define MAIN_H
 
-#include <bits/stdc++.h>
+#ifndef MAIN_H_
+#define MAIN_H_
 
-#endif  // MAIN_H
+#include <iostream>
+
+#endif  // MAIN_H_

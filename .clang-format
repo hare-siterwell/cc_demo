@@ -1,6 +1,0 @@
----
-Language:        Cpp
-BasedOnStyle:  Google
-# AlignConsecutiveMacros: true
-# BreakBeforeBraces: Allman
-...

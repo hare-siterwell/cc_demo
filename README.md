@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # cc_demo
+=======
+<Project>, is a <What> for Windows and Linux. Its main purpose is <To>.
+>>>>>>> parent of cd1a3da (优化结构)
 
 基于CMake的C++编程示例
 
@@ -10,7 +14,11 @@
 cmake --build build -t all --
 ```
 
+<<<<<<< HEAD
 ## Usage
+=======
+It describes how to build Orbit and what Compilers, Platforms, and Tools are supported and needed.
+>>>>>>> parent of cd1a3da (优化结构)
 
 ## Tree
 

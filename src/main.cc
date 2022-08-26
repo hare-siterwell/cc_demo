@@ -1,6 +1,6 @@
 /**
- * @file main.cpp
- * @author your name (you@domain.com)
+ * @file main.cc
+ * @author hare
  * @brief Main program body
  * @version 0.1
  * @date 2022-07-07
@@ -10,6 +10,8 @@
  */
 
 #include "main.h"
+
+#include <iostream>
 
 /**
  * @brief The application entry point

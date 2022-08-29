@@ -8,7 +8,7 @@ file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS
 set(PROJECT_LIST ${PROJECT_NAME})
 
 foreach(_project ${PROJECT_LIST})
-  add_executable(${PROJECT_NAME})
+  add_executable(${_project})
 
   target_sources(${_project} PRIVATE ${PROJECT_SOURCES})
 

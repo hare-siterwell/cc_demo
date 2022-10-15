@@ -1,29 +1,15 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.18)
 project(main)
 
 file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS
-  src/*
-)
+  src/*)
 
-set(PROJECT_LIST ${PROJECT_NAME})
+add_executable(${PROJECT_NAME})
 
-foreach(_project ${PROJECT_LIST})
-  add_executable(${_project})
+target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCES})
 
-  target_sources(${_project} PRIVATE ${PROJECT_SOURCES})
-
-  target_include_directories(${_project} PRIVATE
-    include
-  )
-
-  target_compile_options(${_project} PRIVATE)
-  target_compile_definitions(${_project} PRIVATE)
-
-  target_link_options(${_project} PRIVATE)
-  target_link_directories(${_project} PRIVATE)
-  target_link_libraries(${_project} PRIVATE)
-endforeach()
+target_include_directories(${PROJECT_NAME} PRIVATE
+  include)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
-  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
-)
+  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)

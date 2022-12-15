@@ -1,1 +1,31 @@
+---
+Language: Cpp
 BasedOnStyle: Google
+AccessModifierOffset: -2                  # 访问性修饰符偏移
+AlignConsecutiveMacros: Consecutive       # 连续宏定义对齐
+AllowShortFunctionsOnASingleLine: Inline  # 允许类中短函数和空函数在单行上
+BreakBeforeBinaryOperators: All           # 在二元运算符前换行
+BreakBeforeBraces: Custom                 # 在大括号前换行
+BraceWrapping:
+  AfterCaseLabel:  false
+  AfterClass:      true
+  AfterControlStatement: Always
+  AfterEnum:       true
+  AfterFunction:   true
+  AfterNamespace:  true
+  AfterObjCDeclaration: true
+  AfterStruct:     true
+  AfterUnion:      true
+  AfterExternBlock: false
+  BeforeCatch:     true
+  BeforeElse:      true
+  BeforeLambdaBody: false
+  BeforeWhile:     false
+  IndentBraces:    false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+DerivePointerAlignment: false
+IndentCaseLabels: false                   # 不缩进case标签
+PointerAlignment: Right                   # 指针右对齐
+...

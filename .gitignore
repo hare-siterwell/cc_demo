@@ -1,7 +1,39 @@
-# VSCode
-.vscode/
+# Build System
+out/
 build/
-*.user*
-~*
-
 bin/
+
+# Temporary Directories
+.tmp/
+
+# Platforms
+.DS_Store
+
+# VS Code Configs
+.vscode/*
+
+# C-Lion / IDEA files
+.idea/*
+
+# Python bytecodes
+__pycache__
+*.pyc
+*.egg-info
+
+# VSCode java extensions
+.project
+
+# clangd index files
+.cache
+
+# compilation database for VSCode and other Ides
+compile_commands.json
+
+# Doxygen outputs
+docs/html
+
+# user files
+*.user*
+
+# backup files
+*~*

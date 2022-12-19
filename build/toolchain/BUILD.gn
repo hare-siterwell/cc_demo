@@ -30,9 +30,10 @@ toolchain("gcc") {
         [ "{{source_out_dir}}/{{target_output_name}}.{{source_name_part}}.o" ]
   }
   tool("alink") {
-    command = "$ar rcs {{output}} {{inputs}}"
+    rspfile = "{{output}}.rsp"
+    rspfile_content = "{{inputs}}"
+    command = "$ar rcs {{output}} @$rspfile"
     description = "AR {{target_output_name}}{{output_extension}}"
-
     outputs =
         [ "{{target_out_dir}}/{{target_output_name}}{{output_extension}}" ]
     default_output_extension = ".a"
@@ -42,15 +43,12 @@ toolchain("gcc") {
     soname = "{{target_output_name}}{{output_extension}}"
     sofile = "{{output_dir}}/$soname"
     rspfile = soname + ".rsp"
-
     os_specific_option = "-Wl,-soname=$soname"
     rspfile_content = "-Wl,--whole-archive {{inputs}} {{solibs}} -Wl,--no-whole-archive {{libs}}"
-
     command = "$ld -shared {{ldflags}} -o $sofile $os_specific_option @$rspfile"
     description = "SOLINK $soname"
     default_output_extension = ".so"
     default_output_dir = "{{root_out_dir}}"
-
     outputs = [ sofile ]
     link_output = sofile
     depend_output = sofile
@@ -66,11 +64,11 @@ toolchain("gcc") {
     outputs = [ outfile ]
   }
   tool("stamp") {
-    command = "cmd /c type nul > \"{{output}}\""
+    command = "cmd /c echo > {{output}}"
     description = "STAMP {{output}}"
   }
   tool("copy") {
-    command = "copy /Y {{source}} {{output}}"
+    command = "cp /y {{source}} {{output}}"
     description = "COPY {{source}} {{output}}"
   }
 }

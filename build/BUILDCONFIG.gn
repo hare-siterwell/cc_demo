@@ -1,5 +1,6 @@
 declare_args() {
   is_debug = false
+  freertos_root = "//third_party/freertos"
 }
 
 if (target_os == "") {

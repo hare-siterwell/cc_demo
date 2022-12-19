@@ -1,0 +1,18 @@
+declare_args() {
+  freertos_target = ""
+}
+
+if (freertos_target != "") {
+  group("freertos") {
+    public_deps = [ freertos_target ]
+  }
+} else {
+  import("freertos.gni")
+
+  freertos_target("freertos") {
+    sources = [
+      "${freertos_root}/repo/portable/MSVC-MingW/port.c",
+      "${freertos_root}/repo/portable/MemMang/heap_4.c",
+    ]
+  }
+}

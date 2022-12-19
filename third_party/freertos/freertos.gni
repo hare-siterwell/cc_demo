@@ -1,0 +1,40 @@
+template("freertos_target") {
+  freertos_target_name = target_name
+
+  _freertos_root = "${freertos_root}/repo"
+
+  config("${freertos_target_name}_config") {
+    include_dirs = [
+      "${_freertos_root}/include",
+      "//include",
+      "${freertos_root}/repo/portable/MSVC-MingW",
+    ]
+  }
+
+  source_set(freertos_target_name) {
+    forward_variables_from(invoker, "*")
+
+    if (!defined(sources)) {
+      sources = []
+    }
+
+    sources += [
+      "${_freertos_root}/event_groups.c",
+      "${_freertos_root}/list.c",
+      "${_freertos_root}/queue.c",
+      "${_freertos_root}/stream_buffer.c",
+      "${_freertos_root}/tasks.c",
+      "${_freertos_root}/timers.c",
+    ]
+
+    if (!defined(configs)) {
+      configs = []
+    }
+
+    if (!defined(public_configs)) {
+      public_configs = []
+    }
+
+    public_configs += [ ":${freertos_target_name}_config" ]
+  }
+}

@@ -1,10 +1,19 @@
 executable("hello") {
-  sources = [ "src/hello.cpp" ]
-  include_dirs = [ "include" ]
+  sources = [
+    "src/main.c",
+    "src/main_blinky.c",
+  ]
+  include_dirs = [
+    "include",
+    "include/Trace_Recorder_Configuration",
+    "third_party/freertos/repo/include",
+  ]
+  libs = [ "winmm" ]
 
   deps = [
     ":hello_shared",
     ":hello_static",
+    "third_party/freertos",
   ]
 }
 

@@ -1,7 +1,5 @@
 # Build System
 out/
-build/
-bin/
 
 # Temporary Directories
 .tmp/

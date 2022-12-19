@@ -3,6 +3,7 @@ Checks: >
   -*,
   bugprone-*,
   -bugprone-easily-swappable-parameters,
+  -bugprone-reserved-identifier,
   misc-*,
   -misc-non-private-member-variables-in-classes,
   modernize-*,

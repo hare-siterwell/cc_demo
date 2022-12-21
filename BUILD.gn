@@ -1,11 +1,11 @@
-executable("hello") {
+executable("main") {
   sources = [
     "src/main.c",
     "src/main_blinky.c",
+    "src/Run-time-stats-utils.c",
   ]
   include_dirs = [
     "include",
-    "include/Trace_Recorder_Configuration",
     "third_party/freertos/repo/include",
   ]
   libs = [ "winmm" ]

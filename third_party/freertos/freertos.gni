@@ -19,11 +19,15 @@ template("freertos_target") {
     }
 
     sources += [
-      "${_freertos_root}/event_groups.c",
+      # "${_freertos_root}/event_groups.c",
+
       "${_freertos_root}/list.c",
       "${_freertos_root}/queue.c",
-      "${_freertos_root}/stream_buffer.c",
+
+      # "${_freertos_root}/stream_buffer.c",
+
       "${_freertos_root}/tasks.c",
+
       "${_freertos_root}/timers.c",
     ]
 

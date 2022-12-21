@@ -1,7 +1,6 @@
 executable("main") {
   sources = [
     "src/main.c",
-    "src/main_blinky.c",
     "src/Run-time-stats-utils.c",
   ]
   include_dirs = [

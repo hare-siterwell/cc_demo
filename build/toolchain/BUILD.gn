@@ -1,8 +1,10 @@
 toolchain("gcc") {
-  cc = "D:/Toolchains/mingw64/bin/gcc"
-  cxx = "D:/Toolchains/mingw64/bin/g++"
+  mingw64_home = "D:/Toolchains/mingw64/bin"
+
+  cc = "$mingw64_home/gcc"
+  cxx = "$mingw64_home/g++"
   asm = cc
-  ar = "D:/Toolchains/mingw64/bin/ar"
+  ar = "$mingw64_home/ar"
   ld = cxx
 
   tool("cc") {

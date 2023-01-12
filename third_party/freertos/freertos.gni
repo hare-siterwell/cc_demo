@@ -27,7 +27,6 @@ template("freertos_target") {
       # "${_freertos_root}/stream_buffer.c",
 
       "${_freertos_root}/tasks.c",
-
       "${_freertos_root}/timers.c",
     ]
 
